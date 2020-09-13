@@ -19,26 +19,27 @@ namespace workwithidentity
     {
         public Task SendAsync(IdentityMessage message)
         {
+            //Нестабильно работающий код
             // с какого адреса веб приложение будет отправлять данные 
-            string from;
-            string pass;
-            #region Confidencial 
-            from = "calling.znanija@gmail.com";
-            pass = "forsag5school46";
-            #endregion
-            SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
-            client.DeliveryMethod = SmtpDeliveryMethod.Network;
-            client.UseDefaultCredentials = false;
-            client.Credentials =  new System.Net.NetworkCredential(from, pass);
-            client.EnableSsl = true;
-            var mail = new MailMessage(from, message.Destination);
-            mail.Subject = message.Subject;
-            mail.Body = message.Body;
-            mail.IsBodyHtml = true;
-            return client.SendMailAsync(mail);
+            //string from;
+            //string pass;
+            //#region Confidencial 
+            //from = "noreply@gmail.com";
+            //pass = "Password";
+            //#endregion
+            //SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+            //client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            //client.UseDefaultCredentials = false;
+            //client.Credentials =  new System.Net.NetworkCredential(from, pass);
+            //client.EnableSsl = true;
+            //var mail = new MailMessage(from, message.Destination);
+            //mail.Subject = message.Subject;
+            //mail.Body = message.Body;
+            //mail.IsBodyHtml = true;
+            //return client.SendMailAsync(mail);
 
             // Подключите здесь службу электронной почты для отправки сообщения электронной почты.
-           // return Task.FromResult(0);
+           return Task.FromResult(0);
         }
     }
 
