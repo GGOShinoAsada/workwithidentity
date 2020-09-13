@@ -18,7 +18,8 @@ namespace workwithidentity.Controllers
 
         public string GetAge()
         {
-            var identity = (GenericPrincipal)Thread.CurrentPrincipal;
+            //var identity = (GenericPrincipal)Thread.CurrentPrincipal;
+            var identity = (System.Security.Claims.ClaimsPrincipal)Thread.CurrentPrincipal;
             var age = identity.Claims.Where(x => x.Type == "age").Select(x => x.Value).SingleOrDefault();
             return age;
         }
