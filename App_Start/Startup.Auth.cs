@@ -58,11 +58,11 @@ namespace workwithidentity
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "876250668072-q510ih5pifj5og1od3h6t52531h2umv0.apps.googleusercontent.com",
+                ClientSecret = "XCcqCXOBXSd-t2-qTnUsL1r2"
+            });
         }
     }
 }
