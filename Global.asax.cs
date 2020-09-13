@@ -15,7 +15,7 @@ namespace workwithidentity
     {
         protected void Application_Start()
         {
-            Database.SetInitializer<ApplicationDbContext>(new AppDbIntializer()); 
+            //Database.SetInitializer<ApplicationDbContext>(new AppDbIntializer()); 
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

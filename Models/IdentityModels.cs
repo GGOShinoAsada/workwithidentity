@@ -20,8 +20,10 @@ namespace workwithidentity.Models
             // Обратите внимание, что authenticationType должен совпадать с типом, определенным в CookieAuthenticationOptions.AuthenticationType
             var userIdentity = await manager.CreateIdentityAsync(this, DefaultAuthenticationTypes.ApplicationCookie);
             // Здесь добавьте утверждения пользователя
+            userIdentity.AddClaim(new Claim("age", this.Age.ToString()));
             return userIdentity;
         }
+        public int Age { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
